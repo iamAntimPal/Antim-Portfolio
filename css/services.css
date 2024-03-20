@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .box {
+  text-align: center;
+  background: rgba(204, 204, 204, 0.1);
+  padding: 80px 20px;
+  border-radius: 8px;
+  margin-top: 50px;
+  transition: all ease-in-out 0.3s;
+}
+.services .box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #00aaff;
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+.services .box .icon i {
+  color: #fff;
+  font-size: 28px;
+}
+.services .box .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+.services .box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+.services .box h4 a {
+  color: #fff;
+}
+.services .box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.services .box:hover {
+  background: #00aaff;
+  border-color: #00aaff;
+}
+.services .box:hover .icon {
+  background: #fff;
+}
+.services .box:hover .icon i {
+  color: #00aaff;
+}
+.services .box:hover .icon::before {
+  background: #00aaff;
+}
+.services .box:hover h4 a,
+.services .box:hover p {
+  color: #fff;
+}
