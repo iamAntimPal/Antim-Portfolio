@@ -1,81 +1,99 @@
 /*--------------------------------------------------------------
-# Services
+# Projects Section
 --------------------------------------------------------------*/
-.services .box {
+.portfolio {
+     background: #000;
+     max-width: 1200px;
+     margin: auto;
+     padding: 60px 20px;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: auto;
+     gap: 30px;
+}
+
+.portfolio .section-title {
+     grid-column: span 2;
      text-align: center;
-     background: rgba(204, 204, 204, 0.1);
-     padding: 80px 20px;
-     border-radius: 8px;
-     margin-top: 50px;
-     transition: all ease-in-out 0.3s;
+     color: #fff;
+     margin-bottom: 40px;
 }
 
-.services .box .icon {
-     margin: 0 auto;
-     width: 64px;
-     height: 64px;
-     background: #00aaff;
-     border-radius: 5px;
-     transition: all 0.3s ease-out 0s;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     margin-bottom: 20px;
+.portfolio .section-title h2 {
+     font-size: 2.5rem;
+     color: #ffcc00;
+     margin-bottom: 10px;
+}
+
+.portfolio .section-title p {
+     color: #aaa;
+     font-size: 1.1rem;
+}
+
+.portfolio .card {
+     background: #111;
+     border-radius: 15px;
+     overflow: hidden;
+     transition: all 0.6s ease;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+     cursor: pointer;
      transform-style: preserve-3d;
+     perspective: 1000px;
 }
 
-.services .box .icon i {
-     color: #fff;
-     font-size: 28px;
+.portfolio .card:hover {
+     transform: rotateY(8deg) rotateX(8deg) scale(1.03);
+     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
-.services .box .icon::before {
-     position: absolute;
-     content: "";
-     left: -8px;
-     top: -8px;
-     height: 100%;
+.portfolio .card img {
      width: 100%;
-     background: rgba(255, 255, 255, 0.2);
-     border-radius: 5px;
-     transition: all 0.3s ease-out 0s;
-     transform: translateZ(-1px);
+     height: 200px;
+     object-fit: cover;
+     display: block;
 }
 
-.services .box h4 {
-     font-weight: 700;
-     margin-bottom: 15px;
-     font-size: 24px;
+.portfolio .card-content {
+     padding: 20px;
+     background-color: #1a1a1a;
+     transition: background-color 0.3s ease;
 }
 
-.services .box h4 a {
+.portfolio .card:hover .card-content {
+     background-color: #222;
+}
+
+.portfolio .card-title {
+     font-size: 1.4rem;
+     margin-bottom: 10px;
+     color: #ffcc00;
+     transition: color 0.3s ease;
+}
+
+.portfolio .card-desc {
+     font-size: 1rem;
+     color: #ccc;
+     line-height: 1.4;
+     transition: color 0.3s ease;
+}
+
+.portfolio .card:hover .card-title,
+.portfolio .card:hover .card-desc {
      color: #fff;
 }
 
-.services .box p {
-     line-height: 24px;
-     font-size: 14px;
-     margin-bottom: 0;
+@media (max-width: 768px) {
+     .portfolio .card img {
+          height: 180px;
+     }
 }
 
-.services .box:hover {
-     background: #00aaff;
-     border-color: #00aaff;
-}
+@media (max-width: 600px) {
+     .portfolio {
+          grid-template-columns: 1fr;
+     }
 
-.services .box:hover .icon {
-     background: #fff;
-}
-
-.services .box:hover .icon i {
-     color: #00aaff;
-}
-
-.services .box:hover .icon::before {
-     background: #00aaff;
-}
-
-.services .box:hover h4 a,
-.services .box:hover p {
-     color: #fff;
+     .portfolio .section-title {
+          grid-column: span 1;
+     }
 }
